@@ -1,0 +1,43 @@
+<mat-toolbar class="mat-color-class">
+  <button
+    mat-button
+    routerLink="/wallet"
+    routerLinkActive="active-class"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <mat-icon>assessment</mat-icon>
+  </button>
+
+  <span class="example-spacer"></span>
+
+  <p
+    *ngIf="flag"
+    class="text-info"
+    style="margin-bottom:0;color:white !important;"
+  >
+    {{ loggedusername }}
+  </p>
+  <p
+    *ngIf="flag"
+    class="text-info"
+    style="margin-bottom:0;margin-left:5px;color:white !important ;"
+  >
+    $ {{ wallet_bal }}
+  </p>
+  <mat-menu #appMenu="matMenu">
+    <button mat-menu-item routerLink="/login" style="color:#1e64d2;">
+      <mat-icon style="color:#1e64d2;">how_to_reg</mat-icon>
+      Login
+    </button>
+
+    <button style="color:#1e64d2;" mat-menu-item>
+      <mat-icon style="color:#1e64d2;">power_settings_new</mat-icon>
+      Logout
+    </button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>perm_identity</mat-icon>
+  </button>
+</mat-toolbar>
+<router-outlet></router-outlet>

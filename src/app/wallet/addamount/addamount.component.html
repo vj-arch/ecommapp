@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Post</title>
+</head>
+<body>
+    <div class="AM-container">
+<form (submit)="addnewpost(postform)" #postform="ngForm">
+    <mat-form-field>
+        <input matInput type="number" name="money" [ngModel]="money" [value]="300" placeholder="Add Money" #money="ngModel" />
+        
+    </mat-form-field><br>
+   
+  <br>
+  <button 
+  type="submit" 
+  mat-raised-button 
+  color="accent" 
+  >Add To Wallet</button>
+ </form>
+</div>
+</body>
+</html>

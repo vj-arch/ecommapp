@@ -1,0 +1,9 @@
+.AM-container{
+    width: 50%;
+    margin:auto;
+    text-align: center;
+}
+
+.AM-container form{
+    margin-top: 20px;
+}

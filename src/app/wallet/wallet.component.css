@@ -1,0 +1,79 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.mat-color-class {
+  background-color: #3c6382;
+}
+
+button {
+  color: white;
+}
+
+button:focus {
+  border: none;
+  outline: none;
+}
+.active-class {
+  color: white;
+}
+.grey-class {
+  color: rgb(34, 33, 33);
+}
+body {
+  font-family: "Raleway", sans-serif;
+}
+.flex-class {
+  display: flex;
+  flex-direction: row;
+}
+.greyClass {
+  color: rgb(80, 77, 77);
+}
+.greyClass small {
+  color: rgb(138, 134, 134);
+  font-size: 15px;
+}
+.innerdiv-dashboard {
+  color: white;
+}
+.margindiv {
+  margin: 0px 15px;
+}
+.nav-mainmenu {
+  color: white;
+  background-color: rgb(60, 99, 130, 0.8);
+  height: 700px;
+}
+
+.menu-class {
+  color: white;
+  font-size: 15px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #60a3bc;
+}
+.menu-class a {
+  color: white;
+
+  text-decoration: none;
+  background-color: transparent;
+}
+.menu-class a:hover {
+  background-color: #60a3bc;
+  margin-bottom: 3px;
+}
+.calendar-cl {
+  height: 200px;
+  background-color: #12cbc4;
+}
+.img-box {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+.margindiv:hover .img-box {
+  font-size: 50px;
+}

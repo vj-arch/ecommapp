@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3" style="margin-top:20px;">
+      <form
+        class="example-container"
+        (submit)="addTransferTransaction(postform)"
+        #postform="ngForm"
+      >
+        <p *ngIf="flag == 1" class="danger">
+          Incorrect Username or Password
+        </p>
+        <mat-form-field appearance="outline">
+          <mat-label>Send From</mat-label>
+          <input
+            matInput
+            type="text"
+            name="username"
+            [ngModel]="username"
+            [value]="username"
+            placeholder="Send From"
+            required
+          /> </mat-form-field
+        ><br />
+        <mat-form-field appearance="outline">
+          <mat-label>Send To</mat-label>
+          <input
+            matInput
+            type="text"
+            name="touser"
+            [ngModel]="touser"
+            [value]=""
+            placeholder="Send To"
+            required
+          /> </mat-form-field
+        ><br />
+        <mat-form-field appearance="outline">
+          <mat-label>Amount</mat-label>
+          <input
+            matInput
+            type="number"
+            name="amount"
+            [ngModel]="amount"
+            [value]="200"
+            placeholder="Enter Amount"
+            required
+          />
+        </mat-form-field>
+
+        <br />
+        <button type="submit" mat-raised-button color="accent">
+          Transfer
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 style="margin-top:15px;" class="greyClass">
+            Dashboard <small>Control Panel</small>
+          </h3>
+          <div class="row">
+            <div class="col-md-4">
+              <div
+                class="innerdiv-dashboard "
+                style="background-color:#45aaf2;"
+              >
+                <div class="margindiv" style="position: relative;">
+                  <p
+                    style="  padding-top: 10px; font:25px bold ;font-weight: 700;"
+                  >
+                    150
+                  </p>
+                  <small>New Payments</small>
+                  <span
+                    class="fa fa-user-plus fa-4x img-box"
+                    style="color: #60b3ee;"
+                  ></span>
+                </div>
+                <div style="background-color:#2d98da;">
+                  <p class="m-0 p-2 pl-3 flex-class">
+                    More
+                    <mat-icon>arrow_right_alt</mat-icon>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div
+                class="innerdiv-dashboard "
+                style="background-color: #26de81;"
+              >
+                <div class="margindiv" style="position: relative;">
+                  <p
+                    style="  padding-top: 10px; font:25px bold ;font-weight: 700;"
+                  >
+                    150
+                  </p>
+                  <small>New Payments</small>
+                  <span
+                    class="fa fa-pie-chart fa-4x img-box"
+                    style="color: #34bb73;"
+                  ></span>
+                </div>
+                <div style="background-color:#20bf6b;">
+                  <p class="m-0 p-2 pl-3 flex-class">
+                    More
+                    <mat-icon>arrow_right_alt</mat-icon>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" style="position: relative;">
+              <div
+                class="innerdiv-dashboard "
+                style="background-color:#fd9644;"
+              >
+                <div class="margindiv">
+                  <p
+                    style="  padding-top: 10px; font:25px bold ;font-weight: 700;"
+                  >
+                    150
+                  </p>
+                  <small>New Payments</small>
+                  <span
+                    class="fa fa-paper-plane fa-4x img-box mr-4"
+                    style="color: #f78b43;"
+                  ></span>
+                </div>
+                <div style="background-color: #fa8231;">
+                  <p class="m-0 p-2 pl-3 flex-class">
+                    More
+                    <mat-icon>arrow_right_alt</mat-icon>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div>
+                <p>
+                  <i class="fa fa-hdd-o fa-2x mt-3"></i>
+                  <span class="mb-3" style="font-size:20px;"> Sheets</span>
+                </p>
+                <!--
+                    UI Tabs
+                -->
+
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      id="home-tab"
+                      data-toggle="tab"
+                      href="#home"
+                      role="tab"
+                      aria-controls="home"
+                      aria-selected="true"
+                      >Pie Chart</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
+                  >
+                    <div style="display: block;">
+                      <canvas
+                        baseChart
+                        [data]="pieChartData"
+                        [labels]="pieChartLabels"
+                        [chartType]="pieChartType"
+                        [options]="pieChartOptions"
+                        [plugins]="pieChartPlugins"
+                        [legend]="pieChartLegend"
+                        [colors]="chartColors"
+                      >
+                      </canvas>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    Profile
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="contact"
+                    role="tabpanel"
+                    aria-labelledby="contact-tab"
+                  >
+                    Contact
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p class="mt-3">
+                <i class="fa fa-globe fa-2x"></i>
+                <span class="mb-2" style="font-size:20px;"> Maps</span>
+              </p>
+              <div
+                style="background-color:#58B19F; border-radius:5px;height: 350px;"
+              >
+                <div
+                  style="width:100%;height:280px;background-image:url('../../assets/images/BlankMap-World-1ce.png');background-repeat: none;"
+                >
+                  <span class="fa fa-plus-square"></span>
+                  <span class="fa fa-minus-square ml-1"></span>
+                  <span
+                    class="fa fa-map-marker d-flex justify-content-end mb-5 mr-4"
+                  ></span>
+                </div>
+                <div class="d-flex justify-content-center mt-2">
+                  <div class="flex">
+                    <span
+                      class="fa fa-bar-chart fa-2x"
+                      style="color: #fff;"
+                      aria-hidden="true"
+                    >
+                    </span>
+                    <p style="color: #fff;font-size:12px;text-align: center;">
+                      Visitors
+                    </p>
+                  </div>
+                  <div class="flex ml-5">
+                    <span
+                      class="fa fa-area-chart fa-2x "
+                      style="color: #fff;"
+                      aria-hidden="true"
+                    >
+                    </span>
+                    <p style="color: #fff;font-size:12px;text-align: center;">
+                      Exits
+                    </p>
+                  </div>
+                  <div class="flex ml-5">
+                    <span
+                      class="fa fa-line-chart fa-2x "
+                      style="color: #fff;"
+                      aria-hidden="true"
+                    >
+                    </span>
+                    <p style="color: #fff;font-size:12px;text-align: center;">
+                      Online
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
